@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+</head>
+<body>
+    <h1>Enter Temperature:</h1>
+    <form onsubmit="conditionCheck();return false">
+    <label for="temp1">Temperature:</label>
+    <input type="number" name="" id="temp">
+    <button type="submit">Check</button>
+
+   </form>
+
+<p id="result"></p>
+<script src="./index.js"></script>
+
+</body>
+</html>
+
+
+                                                             <!-- JS CODE -->
+
+
+function conditionCheck() {
+    let temp = +document.getElementById("temp").value;
+
+    if (temp >= 30) {
+            document.getElementById("result")
+                .innerHTML = "its too hot"
+
+    } else if (temp >= 25) {
+            document.getElementById("result")
+                .innerHTML = "Its plesent outside"
+
+    } else if (temp >= 20) {
+            document.getElementById("result")
+                .innerHTML = "Its a Lovely Weather Outside"
+
+    } else if (temp >= 10) {
+            document.getElementById("result")
+                .innerHTML = "Carry a Jacket"
+
+    } else if (temp >= 1) {
+            document.getElementById("result")
+                .innerHTML = "probably you would need a jacket"
+
+    } else if(temp<=1){
+            document.getElementById("result")
+                .innerHTML = "its freezing outside"
+    }
+
+    }
